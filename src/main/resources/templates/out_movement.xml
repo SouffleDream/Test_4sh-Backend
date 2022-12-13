@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CargoMessage type="WarehouseMovement-Out">
+    <Header from="RAPIDCARGO" to="CARGOINFO" messageTime="2018-01-21T22:20:07.200Z" messageId="123456789" />
+    <WarehouseMovementOut>
+        <movementTime>2018-01-21T22:19:07.200Z</movementTime>
+        <declaredIn code="CDGRC1" label="RapidCargo CDG"/>
+        <to code="CDGAF1" label="Air Cargo CDG 1"/>
+        <goods>
+            <ref type="AWB" code="07712345678"/>
+            <amount quantity="12" weight="345"/>
+            <description>ELECTRONICS</description>
+            <totalRefAmount quantity="12" weight="345"/>
+        </goods>
+        <customsStatus>X</customsStatus>
+        <customsDocument type="T1" ref="098765432" />
+    </WarehouseMovementOut>
+</CargoMessage>
