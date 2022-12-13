@@ -136,7 +136,7 @@ public class MailSenderService {
                 info = (Element) infos.item(j);
                 //Movement Time
                 Node movementTime = info.getElementsByTagName("movementTime").item(0);
-                movementTime.setTextContent(movement.getMovementTime());
+                movementTime.setTextContent(String.valueOf(movement.getMovementTime()));
 
                 // From
                 Node fromWarehouse = info.getElementsByTagName("from").item(0);

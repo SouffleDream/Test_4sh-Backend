@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
+import java.sql.Date;
+
 @Entity
 @Table(name = "movements")
 public
@@ -13,7 +15,7 @@ class Movement {
     @NonNull
     private String author;
     @NonNull
-    private String creationDateTime;
+    private Date creationDateTime;
     @NonNull
     private String codeWarehouse;
     @NonNull
@@ -25,7 +27,7 @@ class Movement {
     @Nullable
     private String refDocDouane;
     @NonNull
-    private String movementTime;
+    private Date movementTime;
     @NonNull
     private String ref;
     @NonNull
@@ -41,7 +43,8 @@ class Movement {
     @NonNull
     private String description;
 
-    public Movement(Integer id, String author, String creationDateTime, String codeWarehouse, String labelWarehouse, String status, String typeDocDouane, String refDocDouane, String movementTime, String ref, String refType, Integer quantity, Integer totalQuantity, Integer weight, Integer totalWeight, String description) {
+    public Movement(Integer id, String author, Date creationDateTime, String codeWarehouse, String labelWarehouse, String status, String typeDocDouane, String refDocDouane, Date movementTime, String ref, String refType, Integer quantity, Integer totalQuantity, Integer weight, Integer totalWeight, String description) {
+        super();
         this.id = id;
         this.author = author;
         this.creationDateTime = creationDateTime;
@@ -86,7 +89,7 @@ class Movement {
         return codeWarehouse;
     }
     @NonNull
-    public String getCreationDateTime() {
+    public Date getCreationDateTime() {
         return creationDateTime;
     }
     @NonNull
@@ -98,7 +101,7 @@ class Movement {
         return description;
     }
     @NonNull
-    public String getMovementTime() {
+    public Date getMovementTime() {
         return movementTime;
     }
     @NonNull
